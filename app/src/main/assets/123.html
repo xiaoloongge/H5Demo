@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<button id="btn0">调用android无参参数</button>
+<button id="btn1">调用android有参参数</button>
+<br>
+<a href='ddd://atguigu/path?id=123'>详情页</a><br>
+<a href='fff://atguigu/path'>下载</a><br>
+<a href='http://www.baidu.com'>百度</a>
+
+<div id="content"></div>
+
+</body>
+
+<script type="text/javascript">
+        var name = "小龙哥比阿福帅"
+		document.getElementById("btn0").onclick = function(){
+			android.setMessage();
+		};
+		document.getElementById("btn1").onclick = function(){
+                android.setMessage(name);
+		};
+
+		var content = document.getElementById("content");
+
+		function message(){
+			content.innerHTML = "<h1>调用了有参的js函数<h1/>"
+		};
+
+		function message2(des){
+			content.innerHTML = ""+des;
+		};
+	</script>
+</html>
